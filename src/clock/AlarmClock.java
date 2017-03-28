@@ -9,6 +9,9 @@ public class AlarmClock extends Clock {
     private NumberDisplay alarmMinutes = new NumberDisplay(0,60);
     private boolean alarmActivated;
 
+    /**
+     * Testing
+     */
     public AlarmClock() {
     }
 
