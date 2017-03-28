@@ -14,6 +14,7 @@ public class NumberDisplay {
     private boolean didWrapAround;
 
     public NumberDisplay(int minLimit, int maxLimit){
+
         if (minLimit > maxLimit) {
             throw new IllegalArgumentException("minLimit must be lower than maxLimit");
         }
@@ -33,22 +34,26 @@ public class NumberDisplay {
     }
 
     public int getValue(){
+
         return value;
     }
 
     public void setValue(int value){
-        if (value >= minLimit && value < maxLimit-1)
+
+        if (value >= minLimit && value < maxLimit)
             this.value = value;
 
-        else throw new IllegalArgumentException("value must be higher or equal to minLimit AND " +
-                "lower than maxLimit - 1");
+        else throw new IllegalArgumentException("value must be higher or equal to minLimit and " +
+                "lower than maxLimit");
     }
 
     public String getDisplayValue(){
+
         return decFormat.format(value);
     }
 
     public void increment(){
+
         value++;
 
         didWrapAround = false;
@@ -61,6 +66,7 @@ public class NumberDisplay {
     }
 
     public boolean didWrapAround(){
+
         return didWrapAround;
     }
 
