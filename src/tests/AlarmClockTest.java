@@ -48,6 +48,18 @@ public class AlarmClockTest {
         AlarmClock alarm = new AlarmClock(-1, 50);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testCreateAlarmClockInvalidArgs5() throws Exception {
+
+        AlarmClock alarm = new AlarmClock(15, -1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCreateAlarmClockInvalidArgs6() throws Exception {
+
+        AlarmClock alarm = new AlarmClock(-1, -1);
+    }
+
     @Test
     public void testTurnOnAlarm() throws Exception {
 
