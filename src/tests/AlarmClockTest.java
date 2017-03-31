@@ -1,6 +1,6 @@
 package tests;
 
-import clock.AlarmClock;
+import clockpackage.AlarmClock;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

@@ -1,10 +1,7 @@
 package tests;
 
-import clock.NumberDisplay;
-import junit.framework.Assert;
+import clockpackage.NumberDisplay;
 import org.junit.Test;
-
-import java.util.IllegalFormatException;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotSame;

@@ -1,4 +1,4 @@
-package clock;
+package clockpackage;
 
 import java.text.DecimalFormat;
 

@@ -1,4 +1,4 @@
-package clock;
+package clockpackage;
 
 /**
  * Created by dv16ewm on 2017-03-27.
