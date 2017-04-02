@@ -8,6 +8,7 @@ public class AlarmClock extends Clock {
     private NumberDisplay alarmsHours = new NumberDisplay(0,24);
     private NumberDisplay alarmMinutes = new NumberDisplay(0,60);
     private boolean alarmActivated;
+    private boolean alarmIsRinging;
 
 
     public AlarmClock() {
@@ -30,15 +31,21 @@ public class AlarmClock extends Clock {
 
     public boolean isTriggered() {
 
-        if (alarmActivated)
+        if (alarmActivated) {
             if (getTime().equals(alarmsHours.getDisplayValue() + ":" + alarmMinutes.getDisplayValue())) {
 
-                System.out.println("RING RING");
+                alarmIsRinging = true;
+                System.out.println("Alarm");
                 return true;
             }
 
-        System.out.println(getTime());
-            return false;
+            if (alarmIsRinging) {
+                System.out.println("Alarm");
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void turnOn() {
@@ -48,6 +55,7 @@ public class AlarmClock extends Clock {
 
     public void turnOff() {
 
+        alarmIsRinging = false;
         alarmActivated = false;
     }
 
@@ -67,5 +75,11 @@ public class AlarmClock extends Clock {
             return "Alarm is not set";
         }
 
+    }
+
+    public boolean isAlarmIsRinging() {
+        if (alarmIsRinging)
+            return true;
+        return false;
     }
 }

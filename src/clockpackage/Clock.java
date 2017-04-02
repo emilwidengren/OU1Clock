@@ -1,7 +1,7 @@
 package clockpackage;
 
 /**
- * Created by dv16ewm on 2017-03-25.
+ * A class that represents the inner functionality of a digital-watch
  */
 public class Clock {
 
@@ -29,6 +29,8 @@ public class Clock {
 
             hours.increment();
         }
+
+        System.out.println(getTime());
     }
 
     public void setTime(int hour, int minute) {
